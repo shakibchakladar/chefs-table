@@ -1,13 +1,15 @@
 import PropTypes from "prop-types";
-const Recipe = ({ recipe }) => {
-
+import { CiStopwatch } from "react-icons/ci";
+import { GiBurningDot } from "react-icons/gi";
+const Recipe = ({ recipe, handleCard}) => {
+    // console.log(handleCard);
   const {
     recipe_name,
     recipe_image,
     short_description,
-    // preparing_time,
-    // calories,
-    ingredients
+    preparing_time,
+    calories,
+    ingredients,
   } = recipe;
 
   return (
@@ -21,13 +23,23 @@ const Recipe = ({ recipe }) => {
           <p className="p-3">{short_description}</p>
           <hr />
           <h4>Ingredients:{ingredients.length}</h4>
-            {recipe.ingredients.map((ingredient, index) => (
-                // <h2>Ingridient:{ingredient.length}</h2>,
-              <li className=" list-disc" key={index}>{ingredient}</li>
-            ))}
-          
+          {recipe.ingredients.map((ingredient, index) => (
+            // <h2>Ingridient:{ingredient.length}</h2>,
+            <li className=" list-disc" key={index}>
+              {ingredient}
+            </li>
+          ))}
+          <hr />
+          <div className="flex justify-between p-2">
+            <div className="flex gap-3 items-center">
+              <CiStopwatch /> <p>{preparing_time}</p>
+            </div>
+            <div className="flex gap-3 items-center">
+              <GiBurningDot /> <p>{calories}</p>
+            </div>
+          </div>
           <div className="card-actions justify-start">
-            <button className="btn btn-primary">Buy Now</button>
+            <button onClick={()=>{handleCard(recipe)}} className="btn bg-green-500 rounded-3xl">Want to cook</button>
           </div>
         </div>
       </div>
@@ -44,8 +56,7 @@ Recipe.propTypes = {
     preparing_time: PropTypes.number.isRequired,
     calories: PropTypes.number.isRequired,
   }).isRequired,
+  handleCard:PropTypes.func
 };
 
 export default Recipe;
-
-
