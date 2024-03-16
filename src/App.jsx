@@ -1,4 +1,5 @@
 import './App.css'
+import AddCont from './components/AddCont/AddCont'
 import Header from './components/Header/Header'
 import Recipes from './components/Recipes/Recipes'
 
@@ -11,8 +12,9 @@ function App() {
         <h2 className=' text-4xl font-bold text-center'>Our Recipes</h2>
         <p>Indulge in culinary creativity with our websites <br/> recipe section. Explore a diverse collection of mouthwatering dishes, from quick weeknight meals to gourmet delights. <br /> With clear instructions and vibrant imagery, our recipes are designed to inspire both novice cooks and seasoned chefs alike. <br></br> Dive in and elevate your cooking experience today!</p>
       </div>
-      <div>
+      <div className=' flex md:flex-row flex-col'>
         <Recipes></Recipes>
+        <AddCont></AddCont>
       </div>
     </main>
 

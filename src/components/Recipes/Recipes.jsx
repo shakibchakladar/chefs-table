@@ -11,9 +11,11 @@ const Recipes = () => {
     return (
         <div>
             <h2>recipies:{recipes.length}</h2>
-            {
+           <div className=" grid md:grid-cols-2 grid-cols-1 gap-3">
+           {
             recipes.map(recipe=> <Recipe key={recipe.id} recipe={recipe}></Recipe>)
             }
+           </div>
             
         </div>
     );
