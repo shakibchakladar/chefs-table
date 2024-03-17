@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import { useEffect, useState } from "react";
 import Recipe from "../Recipe/Recipe";
 
-const Recipes = ({ handleCard }) => {
+const Recipes = ({ handleCard}) => {
   const [recipes, setRecipes] = useState([]);
 
   useEffect(() => {
@@ -24,6 +24,7 @@ const Recipes = ({ handleCard }) => {
 
 Recipes.propTypes = {
   handleCard: PropTypes.func,
+  handlepreparing:PropTypes.func,
 };
 
 export default Recipes;

@@ -1,10 +1,12 @@
-const Cart = ({ cart }) => {
+
+const Cart = ({ cart,index }) => {
     const { recipe_name,preparing_time,calories} = cart || {}; 
-    console.log(cart);
+    // console.log(cart);
+
     return (
         <div>
             <tr>
-                    <th>{1}</th>
+                    <th>{index+1}</th>
                     <td>{recipe_name}</td>
                     <td>{preparing_time}</td>
                     <td>{calories}</td>

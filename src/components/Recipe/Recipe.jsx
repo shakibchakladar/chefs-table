@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import { CiStopwatch } from "react-icons/ci";
 import { GiBurningDot } from "react-icons/gi";
 const Recipe = ({ recipe, handleCard}) => {
-    // console.log(handleCard);
+    // console.log(handlepreparing);
   const {
     recipe_name,
     recipe_image,
@@ -16,7 +16,7 @@ const Recipe = ({ recipe, handleCard}) => {
     <div>
       <div className="w-full shadow-xl card md:w-96 bg-base-100">
         <figure>
-          <img src={recipe_image} alt="" />
+          <img className=" rounded-xl" src={recipe_image} alt="" />
         </figure>
         <div className="card-body">
           <h2 className="card-title">{recipe_name}</h2>
@@ -24,7 +24,6 @@ const Recipe = ({ recipe, handleCard}) => {
           <hr />
           <h4>Ingredients:{ingredients.length}</h4>
           {recipe.ingredients.map((ingredient, index) => (
-            // <h2>Ingridient:{ingredient.length}</h2>,
             <li className="list-disc " key={index}>
               {ingredient}
             </li>

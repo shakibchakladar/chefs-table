@@ -6,10 +6,8 @@ import Cart from "./components/Cart/Cart";
 
 function App() {
   const [selectedRecipes, setSelectedRecipes] = useState([]);
-
   const handleCard = (recipe) => {
-    setSelectedRecipes([...selectedRecipes, recipe]);
-  };
+    setSelectedRecipes([...selectedRecipes, recipe]);} 
 
   return (
     <>
@@ -46,11 +44,14 @@ function App() {
 
                 <tbody>
                   {/* row 1 */}
-                  {selectedRecipes.map((cart) => (
-                    <Cart key={cart.id} cart={cart} />
+                  {selectedRecipes.map((cart,index) => (
+                    <Cart key={cart.id} cart={cart} index={index} />
                   ))}
                 </tbody>
               </table>
+              <h2 className="p-5 text-4xl font-bold text-center">
+                Currently cooking:
+              </h2>
             </div>
           </div>
         </div>

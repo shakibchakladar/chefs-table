@@ -20,7 +20,7 @@
     {
       "recipe_id": 3,
       "recipe_name": "Classic Margherita Pizza",
-      "recipe_image": "https://i.ibb.co/X71ZstB/Rectangle-20170.png",
+      "recipe_image": "https://i.ibb.co/Xpq7xXn/images.jpg",
       "short_description": "Authentic Italian pizza topped with fresh tomatoes, basil, and mozzarella cheese.",
       "ingredients": ["1 pizza dough", "200 g tomatoes", "100 g fresh mozzarella cheese", "Fresh basil leaves"],
       "preparing_time": "40 min",
@@ -38,7 +38,7 @@
     {
       "recipe_id": 5,
       "recipe_name": "Grilled Salmon with Lemon Herb Butter",
-      "recipe_image": "https://i.ibb.co/X71ZstB/Rectangle-20170.png",
+      "recipe_image": "https://i.ibb.co/M6LDcPb/Rectangle-20170-1.png",
       "short_description": "Juicy grilled salmon fillets served with a tangy lemon herb butter sauce.",
       "ingredients": ["4 salmon fillets", "1 lemon", "Fresh herbs (parsley, dill)", "50 g butter"],
       "preparing_time": "15 min",
