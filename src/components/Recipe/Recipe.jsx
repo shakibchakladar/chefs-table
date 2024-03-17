@@ -14,7 +14,7 @@ const Recipe = ({ recipe, handleCard}) => {
 
   return (
     <div>
-      <div className="card w-96 bg-base-100 shadow-xl">
+      <div className="w-full shadow-xl card md:w-96 bg-base-100">
         <figure>
           <img src={recipe_image} alt="" />
         </figure>
@@ -25,21 +25,21 @@ const Recipe = ({ recipe, handleCard}) => {
           <h4>Ingredients:{ingredients.length}</h4>
           {recipe.ingredients.map((ingredient, index) => (
             // <h2>Ingridient:{ingredient.length}</h2>,
-            <li className=" list-disc" key={index}>
+            <li className="list-disc " key={index}>
               {ingredient}
             </li>
           ))}
           <hr />
           <div className="flex justify-between p-2">
-            <div className="flex gap-3 items-center">
+            <div className="flex items-center gap-3">
               <CiStopwatch /> <p>{preparing_time}</p>
             </div>
-            <div className="flex gap-3 items-center">
+            <div className="flex items-center gap-3">
               <GiBurningDot /> <p>{calories}</p>
             </div>
           </div>
-          <div className="card-actions justify-start">
-            <button onClick={()=>{handleCard(recipe)}} className="btn bg-green-500 rounded-3xl">Want to cook</button>
+          <div className="justify-start card-actions">
+            <button onClick={()=>{handleCard(recipe)}} className="bg-green-500 btn rounded-3xl">Want to cook</button>
           </div>
         </div>
       </div>
