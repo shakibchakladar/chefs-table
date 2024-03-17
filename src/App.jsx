@@ -15,7 +15,7 @@ function App() {
     <>
       <Header />
       <main className="container p-5 mx-auto">
-        <div className="w-full m-2 space-y-3 text-center  md:w-2/3 p-7">
+        <div className="w-full m-2 space-y-3 text-center md:w-2/3 p-7">
           <h2 className="text-4xl font-bold text-center">Our Recipes</h2>
           <p>
             Indulge in culinary creativity with our websites recipe section.
@@ -28,16 +28,17 @@ function App() {
         </div>
         <div className="flex flex-col gap-6 md:flex-row">
           <Recipes handleCard={handleCard} />
-          <div className="w-full border-2 border-green-400 md:w-2/5 rounded-2xl card-container">
+          <div className="w-full md:w-2/5 rounded-2xl card-container">
             <h2 className="text-4xl font-bold text-center">
               Want to cook: {selectedRecipes.length}
             </h2>
             <hr />
-            <div className="">
+            <div className="p-5 ">
               <div className="flex justify-around">
                 <h6>Name</h6>
                 <h6 className="ml-2 ">Time</h6>
                 <h6>Calories</h6>
+                <h6></h6>
               </div>
 
               <table className="table">
